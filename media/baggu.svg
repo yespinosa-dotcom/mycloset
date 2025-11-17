@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="item-svg baggu-svg"
+     viewBox="0 0 3025 2088"
+     preserveAspectRatio="xMidYMid meet">
+
+    <mask id="bagguMask" maskUnits="userSpaceOnUse" mask-type="alpha">
+        <image
+            href="baggu.png"
+            x="0"
+            y="0"
+            width="3025"
+            height="2088"
+            pointer-events="none"
+        />
+    </mask>
+
+    <image
+        href="baggu.png"
+        x="0"
+        y="0"
+        width="3025"
+        height="2088"
+        mask="url(#itemMask)"
+        pointer-events="visiblePainted"
+        style="cursor: pointer;"
+    />
+</svg>
