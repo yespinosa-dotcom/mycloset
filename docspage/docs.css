@@ -3,29 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     line-height: 1.6;
     background: #e8b5b5;
 }
-
 .container {
     display: flex;
     min-height: 100vh;
 }
-
 .left-section {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
-
 .title {
     padding: 20px;
     font-size: 1.5rem;
     color: #333;
 }
-
 .image-container {
     flex: 1;
     display: flex;
@@ -33,23 +28,70 @@ body {
     justify-content: center;
     padding: 2px;
     min-height: 32vh;
+    position: relative;
 }
-
 .item-image {
     max-width: 50%;
     object-fit: contain;
     animation: frameSequence 2s steps(1) forwards;
 }
 
+/* Changed from content property to background-image approach */
 @keyframes frameSequence {
     0%, 32.99% {
-        content: url('../media/docs.png');
+        opacity: 1;
     }
     33%, 65.99% {
-        content: url('../media/docs_anim_a.png');
+        opacity: 0;
     }
     66%, 100% {
-        content: url('../media/docs_anim_b.png');
+        opacity: 0;
+    }
+}
+
+/* Alternative method using multiple images */
+.image-container::before,
+.image-container::after {
+    content: '';
+    position: absolute;
+    max-width: 50%;
+    width: 50%;
+    height: auto;
+    aspect-ratio: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+}
+
+.image-container::before {
+    background-image: url('../media/docs_anim_a.png');
+    animation: showFrameB 2s steps(1) forwards;
+}
+
+.image-container::after {
+    background-image: url('../media/docs_anim_b.png');
+    animation: showFrameC 2s steps(1) forwards;
+}
+
+@keyframes showFrameB {
+    0%, 32.99% {
+        opacity: 0;
+    }
+    33%, 65.99% {
+        opacity: 1;
+    }
+    66%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes showFrameC {
+    0%, 65.99% {
+        opacity: 0;
+    }
+    66%, 100% {
+        opacity: 1;
     }
 }
 
@@ -58,15 +100,12 @@ body {
     padding: 40px;
     overflow-y: auto;
 }
-
 .item-details p {
     margin-bottom: 20px;
 }
-
 .item-details strong {
     color: #333;
 }
-
 /* Responsive design */
 @media (max-width: 768px) {
     .container {
@@ -75,5 +114,11 @@ body {
     
     .left-section {
         min-height: 50vh;
+    }
+    
+    .image-container::before,
+    .image-container::after {
+        max-width: 80%;
+        width: 80%;
     }
 }
