@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    background: #d5b5d3;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    padding: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    min-height: 30vh;
+}
+
+.item-image {
+    max-width: 40%;
+    max-height: 100%;
+    object-fit: contain;
+    animation: frameSequence 1.8s steps(1) forwards;
+}
+
+@keyframes frameSequence {
+    0%, 32.99% {
+        content: url('/media/rhinorecords.png');
+    }
+    33%, 65.99% {
+        content: url('/media/rhinorecords_anim_a.png');
+    }
+    66%, 100% {
+        content: url('/media/rhinorecords_anim_b.png');
+    }
+}
+
+.item-details {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.item-details p {
+    margin-bottom: 20px;
+}
+
+.item-details strong {
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left-section {
+        min-height: 50vh;
+    }
+}

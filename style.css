@@ -1,0 +1,179 @@
+body {
+    background: pink;
+    margin: 0;
+    padding: 20px;
+    font-family: monospace;
+h3 {
+    text-align: center;
+    margin: 36px 0;
+    position: relative;
+    z-index: 100;
+    color: #d68b98
+}
+.layer-container {
+    position: relative;
+    width: 80vw;
+    max-width: 1376px;
+    aspect-ratio: 1376 / 986;
+    margin: 0 auto;
+}
+/* Make links work with your positioning */
+.layer-container a {
+    position: absolute;
+    display: block;
+    text-decoration: none;
+}
+.layer-container a object {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+/* Wiggle items (non-clickable items) */
+.wiggle-item {
+    position: absolute;
+    cursor: pointer;
+    transition: filter 0.25s ease;
+}
+.wiggle-item object {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+/* Wiggle items only glow, no scale */
+.wiggle-item:hover {
+    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.9));
+}
+/* Wiggle animation */
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+.wiggle-item.wiggling {
+    animation: wiggle 0.3s ease-in-out 3;
+}
+/* SVG */
+#docs {
+    width: 50%;
+    top: 5%;
+    left: -2%;
+    z-index: 12;
+    transition: filter 0.25s ease, transform 0.25s ease;
+}
+#heelboots {
+    width: 50%;
+    top: 131%;
+    left: 61%;
+    z-index: 11;
+}
+#hat {
+    width: 23%;
+    top: 129%;
+    left: 4%;
+    z-index: 10;
+}
+#greensocks {
+    width: 38%;
+    top: 21%;
+    left: 64%;
+    z-index: 9;
+}
+#baggu {
+    width: 55%;
+    top: 132%;
+    left: 4%;
+    z-index: 8;
+}
+#nmhshirt {
+    width: 61%;
+    top: 2%;
+    left: 22%;
+    z-index: 7;
+}
+#rhinorecords {
+    width: 25%;
+    top: 42%;
+    left: 31%;
+    z-index: 6;
+    transition: filter 0.25s ease, transform 0.25s ease;
+}
+#jeans {
+    width: 67%;
+    top: 23%;
+    left: -7%;
+    z-index: 5;
+    transition: filter 0.25s ease, transform 0.25s ease;
+}
+#emojisock {
+    width: 39%;
+    top: 79%;
+    left: 2%;
+    z-index: 4;
+    transition: filter 0.25s ease, transform 0.25s ease;
+}
+#jacket {
+    width: 68%;
+    top: 74%;
+    left: 2%;
+    z-index: 3;
+    transition: filter 0.25s ease, transform 0.25s ease;
+}
+#scarf {
+    width: 50%;
+    top: 41%;
+    left: 50%;
+    z-index: 2;
+    transition: filter 0.25s ease, transform 0.25s ease;
+}
+#diesel {
+    width: 76%;
+    top: 100%;
+    left: 25%;
+    z-index: 1;
+    transition: filter 0.25s ease, transform 0.25s ease;
+}
+/* HOVER - Items with links get glow + scale */
+#docs:hover,
+#rhinorecords:hover,
+#jeans:hover,
+#emojisock:hover,
+#jacket:hover,
+#scarf:hover,
+#diesel:hover {
+    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.9));
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/* Item detail pages */
+.item-detail {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.back-btn {
+    display: inline-block;
+    background: white;
+    padding: 8px 18px;
+    text-decoration: none;
+    color: black;
+    opacity: 80%;
+    margin-bottom: 30px;
+    transition: transform 0.2s ease;
+    border-radius: 10px;
+}
+.back-btn:hover {
+    transform: scale(1.05);
+    opacity: 100%;
+}
+.item-detail h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.item-detail p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
