@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="item-svg diesel-svg"
+     viewBox="0 0 3748 2566"
+     preserveAspectRatio="xMidYMid meet">
+
+    <mask id="dieselMask" maskUnits="userSpaceOnUse" mask-type="alpha">
+        <image
+            href="diesel.png"
+            x="0"
+            y="0"
+            width="3748"
+            height="2566"
+            pointer-events="none"
+        />
+    </mask>
+
+    <image
+        href="diesel.png"
+        x="0"
+        y="0"
+        width="3748"
+        height="2566"
+        mask="url(#itemMask)"
+        pointer-events="visiblePainted"
+        style="cursor: pointer;"
+    />
+</svg>

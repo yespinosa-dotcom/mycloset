@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="item-svg heelboots-svg"
+     viewBox="0 0 2625 2040"
+     preserveAspectRatio="xMidYMid meet">
+
+    <mask id="heelbootsMask" maskUnits="userSpaceOnUse" mask-type="alpha">
+        <image
+            href="heelboots.png"
+            x="0"
+            y="0"
+            width="2625"
+            height="2040"
+            pointer-events="none"
+        />
+    </mask>
+
+    <image
+        href="heelboots.png"
+        x="0"
+        y="0"
+        width="2625"
+        height="2040"
+        mask="url(#itemMask)"
+        pointer-events="visiblePainted"
+        style="cursor: pointer;"
+    />
+</svg>

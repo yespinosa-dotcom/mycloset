@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     class="item-svg rhinorecords-svg"
+     viewBox="0 0 1259 1904" 
+     preserveAspectRatio="xMidYMid meet"
+     overflow="visible">
+   
+    <mask id="rhinorecordsMask" maskUnits="userSpaceOnUse" mask-type="alpha">
+        <image 
+               href="rhinorecords.png" 
+               x="0" y="0" 
+               width="1259" 
+               height="1904" 
+               pointer-events="none"
+               />
+    </mask>
+    <image
+        href="rhinorecords.png"
+        x="0"
+        y="0"
+        width="1259"
+        height="1904"
+        mask="url(#rhinorecordsMask)"
+        pointer-events="visiblePainted"
+        style="cursor: pointer; display: block" />
+</svg>

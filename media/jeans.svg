@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     class="item-svg jeans-svg"
+     viewBox="0 0 3318 2496" 
+     preserveAspectRatio="xMidYMid meet">
+   
+    <mask id="jeansMask" maskUnits="userSpaceOnUse" mask-type="alpha">
+        <image 
+               href="jeans.png" 
+               x="0" y="0" 
+               width="3318" 
+               height="2496" 
+               pointer-events="none"
+               />
+    </mask>
+
+    <image
+        href="jeans.png"
+        x="0"
+        y="0"
+        width="3318"
+        height="2496"
+        mask="url(#itemMask)"
+        pointer-events="visiblePainted"
+        style="cursor: pointer; display: block" />
+</svg>

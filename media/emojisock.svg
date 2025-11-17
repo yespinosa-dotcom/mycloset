@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="item-svg emojisock-svg"
+     viewBox="0 0 1702 1560"
+     preserveAspectRatio="xMidYMid meet">
+
+    <mask id="emojiMask" maskUnits="userSpaceOnUse" mask-type="alpha">
+        <image
+            href="emojisock.png"
+            x="0"
+            y="0"
+            width="1702"
+            height="1560"
+            pointer-events="none"
+        />
+    </mask>
+
+    <image
+        href="emojisock.png"
+        x="0"
+        y="0"
+        width="1702"
+        height="1560"
+        mask="url(#itemMask)"
+        pointer-events="visiblePainted"
+        style="cursor: pointer;"
+    />
+</svg>

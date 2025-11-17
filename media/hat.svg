@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="item-svg hat-svg"
+     viewBox="0 0 989 964"
+     preserveAspectRatio="xMidYMid meet">
+
+    <mask id="hatMask" maskUnits="userSpaceOnUse" mask-type="alpha">
+        <image
+            href="hat.png"
+            x="0"
+            y="0"
+            width="989"
+            height="964"
+            pointer-events="none"
+        />
+    </mask>
+
+    <image
+        href="hat.png"
+        x="0"
+        y="0"
+        width="989"
+        height="964"
+        mask="url(#itemMask)"
+        pointer-events="visiblePainted"
+        style="cursor: pointer;"
+    />
+</svg>

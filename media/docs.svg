@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="item-svg docs-svg"
+     viewBox="0 0 2768 2104"
+     preserveAspectRatio="xMidYMid meet">
+
+    <mask id="docsMask" maskUnits="userSpaceOnUse" mask-type="alpha">
+        <image
+            href="docs.png"
+            x="0"
+            y="0"
+            width="2768"
+            height="2104"
+            pointer-events="none"
+        />
+    </mask>
+
+    <image
+        href="docs.png"
+        x="0"
+        y="0"
+        width="2768"
+        height="2104"
+        mask="url(#itemMask)"
+        pointer-events="visiblePainted"
+        style="cursor: pointer;"
+    />
+</svg>

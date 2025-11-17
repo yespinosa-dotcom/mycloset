@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     class="item-svg scarf-svg"
+     viewBox="0 0 2390 2615" 
+     preserveAspectRatio="xMidYMid meet"
+     overflow="visible">
+   
+    <mask id="scarfMask" maskUnits="userSpaceOnUse" mask-type="alpha">
+        <image 
+               href="scarf.png" 
+               x="0" y="0" 
+               width="2390" 
+               height="2615" 
+               pointer-events="none"
+               />
+    </mask>
+    <image
+        href="scarf.png"
+        x="0"
+        y="0"
+        width="2390"
+        height="2615"
+        mask="url(#scarfMask)"
+        pointer-events="visiblePainted"
+        style="cursor: pointer; display: block" />
+</svg>

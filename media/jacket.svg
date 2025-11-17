@@ -1,0 +1,21 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="item-svg jacket-svg"
+    viewBox="0 0 3474 2485"
+    preserveAspectRatio="xMidYMid meet"
+    overflow="visible">
+  
+    <mask id="jacketMask" maskUnits="userSpaceOnUse" mask-type="alpha">
+        <image href="jacket.png" x="0" y="0" width="3474" height="2485" pointer-events="none" />
+    </mask>
+ 
+    <image
+        href="jacket.png"
+        x="0"
+        y="0"
+        width="3474"
+        height="2485"
+        mask="url(#jacketMask)"
+        pointer-events="visiblePainted"
+        style="cursor: pointer; display: block" />
+</svg>

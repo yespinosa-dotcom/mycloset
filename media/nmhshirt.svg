@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     class="item-svg nmhshirt-svg"
+     viewBox="0 0 2340 1867" 
+     preserveAspectRatio="xMidYMid meet"
+     overflow="visible">
+   
+    <mask id="nmhshirtMask" maskUnits="userSpaceOnUse" mask-type="alpha">
+        <image 
+               href="nmhshirt.png" 
+               x="0" y="0" 
+               width="2340" 
+               height="1867" 
+               pointer-events="none"
+               />
+    </mask>
+    <image
+        href="nmhshirt.png"
+        x="0"
+        y="0"
+        width="2340"
+        height="1867"
+        mask="url(#nmhshirtMask)"
+        pointer-events="visiblePainted"
+        style="cursor: pointer; display: block" />
+</svg>
