@@ -1,124 +1,47 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    line-height: 1.6;
-    background: #e8b5b5;
-}
-.container {
-    display: flex;
-    min-height: 100vh;
-}
-.left-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-.title {
-    padding: 20px;
-    font-size: 1.5rem;
-    color: #333;
-}
-.image-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px;
-    min-height: 32vh;
-    position: relative;
-}
-.item-image {
-    max-width: 50%;
-    object-fit: contain;
-    animation: frameSequence 2s steps(1) forwards;
-}
-
-/* Changed from content property to background-image approach */
-@keyframes frameSequence {
-    0%, 32.99% {
-        opacity: 1;
-    }
-    33%, 65.99% {
-        opacity: 0;
-    }
-    66%, 100% {
-        opacity: 0;
-    }
-}
-
-/* Alternative method using multiple images */
-.image-container::before,
-.image-container::after {
-    content: '';
-    position: absolute;
-    max-width: 50%;
-    width: 50%;
-    height: auto;
-    aspect-ratio: 1;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0;
-}
-
-.image-container::before {
-    background-image: url('../media/docs_anim_a.png');
-    animation: showFrameB 2s steps(1) forwards;
-}
-
-.image-container::after {
-    background-image: url('../media/docs_anim_b.png');
-    animation: showFrameC 2s steps(1) forwards;
-}
-
-@keyframes showFrameB {
-    0%, 32.99% {
-        opacity: 0;
-    }
-    33%, 65.99% {
-        opacity: 1;
-    }
-    66%, 100% {
-        opacity: 0;
-    }
-}
-
-@keyframes showFrameC {
-    0%, 65.99% {
-        opacity: 0;
-    }
-    66%, 100% {
-        opacity: 1;
-    }
-}
-
-.item-details {
-    flex: 1;
-    padding: 40px;
-    overflow-y: auto;
-}
-.item-details p {
-    margin-bottom: 20px;
-}
-.item-details strong {
-    color: #333;
-}
-/* Responsive design */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    
-    .left-section {
-        min-height: 50vh;
-    }
-    
-    .image-container::before,
-    .image-container::after {
-        max-width: 80%;
-        width: 80%;
-    }
-}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Black Docs - clothexistence</title>
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="docs.css" />
+        
+        <link rel="preload" href="../media/docs.png" as="image">
+        <link rel="preload" href="../media/docs_anim_a.png" as="image">
+        <link rel="preload" href="../media/docs_anim_b.png" as="image">
+    </head>
+    <body>
+        <div class="title">
+            <h1>Black Docs</h1>
+            <a href="../index.html" class="back-btn">← Back to closet</a>
+        </div>
+        
+        <div class="image-container">
+            <img src="../media/docs.png" alt="Black Docs" class="item-image">
+        </div>
+        
+        <div class="item-details">
+                <p class="acquired">
+                    <strong>Acquired:</strong> May 2019 in Santa Monica, CA. Black leather, 10 hole lace up boots.
+                </p>
+                
+                <p class="description">
+                    <strong>What:</strong> My dad one day brought my entire family to Santa Monica's Doc Marten store because he decided that we were a "docs family." He gave up his own pair of docs that he'd wear to all of his music shows etc. after becoming a dad because he thought that was what a dad should do, but in 2019 he had an epiphany where he realized he still wanted to visit punk shows and music festivals and didn't have to give that up as a father. He decided to also buy us all a pair of doc martens. I think my sister and I also expressed interest in wanting a pair which probably influenced this decision a little.
+                </p>
+                
+                <p class="emotions">
+                    <strong>Emotions:</strong> I was INCREDIBLY happy to own my first ever pair of docs. I remember really really wanting to own a pair so bad. In 2019 I was an art kid that was slowly discovering my personal style. Owning a pair just felt like a gateway into entering a new level of myself, so to speak. I also remember my highschool boyfriend's older sister owned a pair, and she was the quintessential art kid that I aspired to be, and I remember how cool they looked on her and how it made me want a pair so bad. This was also the era where the soft indie art hoe aesthetic was popular and they were on my pinterest page a LOT. I yearned for a pair of docs. I got the black pair because black goes with everything.
+                </p>
+                
+                <p class="memories">
+                    <strong>Memories:</strong> These docs have been with me through thick and thin. Out of all the shoes I own, they are probably the ones I wear the most. I wear them every season, they come with me to probably 90% of every concert/show I've been to since 2019 because one they look cute and second because I tend to stand in the GA pit, and they protect my feet especially if the crowd is more rowdy (my dad taught me this). They came with me to Japan twice—once during covid and once before starting UCLA over the summer. They came with me during my study abroad trip to Italy for three months, and I wore them almost every day. I wore them to the ground, the soles broke twice and the cobbler fixed them for me. They have a small mysterious rip on the side of one shoe for a reason I forgot. I don't think I could get rid of these shoes ever, even if they become completely worn. I have so many memories and meaning attached to these shoes. I met one of my best friends of all time, Pape, because of these shoes, we were in an art class in fall of 2019 and he made a comment about how we both were wearing docs and that he liked my outfit. That feeling was mutual! We've been really good friends since. The leather on these shoes are really wrinkled because of how often I wear them but maybe also because I probably don't take good enough care of the leather.
+                </p>
+                
+                <p class="feel">
+                    <strong>Feel:</strong> When I first got these docs they would rip my ankles up and give me the worst ever blisters. But now they've fully formed to my legs and feet. The soles are super comfortable. I opted for the 10 hole docs because I thought the longer fit looked better on me.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
