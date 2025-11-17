@@ -43,13 +43,13 @@ body {
 
 @keyframes frameSequence {
     0%, 32.99% {
-        opacity: 1;
+        content: url('/media/docs.png');
     }
     33%, 65.99% {
-        opacity: 0;
+        content: url('/media/docs_anim_a.png');
     }
     66%, 100% {
-        opacity: 0;
+        content: url('/media/docs_anim_b.png');
     }
 }
 
