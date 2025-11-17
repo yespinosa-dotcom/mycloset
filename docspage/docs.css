@@ -7,30 +7,32 @@
 body {
     line-height: 1.6;
     background: #e8b5b5;
-    padding: 40px 20px;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
     padding: 20px;
     font-size: 1.5rem;
     color: #333;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.title h1 {
-    margin-bottom: 10px;
 }
 
 .image-container {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
-    min-height: 50vh;
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 2px;
+    min-height: 32vh;
 }
 
 .item-image {
@@ -39,7 +41,6 @@ body {
     animation: frameSequence 2s steps(1) forwards;
 }
 
-/* Frame sequence for main image */
 @keyframes frameSequence {
     0%, 32.99% {
         opacity: 1;
@@ -52,85 +53,27 @@ body {
     }
 }
 
-/* Pseudo-elements for animation frames */
-.image-container::before,
-.image-container::after {
-    content: '';
-    position: absolute;
-    max-width: 50%;
-    width: 50%;
-    height: auto;
-    aspect-ratio: 1;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0;
-}
-
-.image-container::before {
-    background-image: url('../media/docs_anim_a.png');
-    animation: showFrameB 2s steps(1) forwards;
-}
-
-.image-container::after {
-    background-image: url('../media/docs_anim_b.png');
-    animation: showFrameC 2s steps(1) forwards;
-}
-
-@keyframes showFrameB {
-    0%, 32.99% {
-        opacity: 0;
-    }
-    33%, 65.99% {
-        opacity: 1;
-    }
-    66%, 100% {
-        opacity: 0;
-    }
-}
-
-@keyframes showFrameC {
-    0%, 65.99% {
-        opacity: 0;
-    }
-    66%, 100% {
-        opacity: 1;
-    }
-}
-
-/* Text content below the image */
 .item-details {
-    padding: 20px 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
 }
 
 .item-details p {
     margin-bottom: 20px;
-    color: #333;
 }
 
 .item-details strong {
-    color: #000;
+    color: #333;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-    body {
-        padding: 20px 10px;
+    .container {
+        flex-direction: column;
     }
     
-    .item-image {
-        max-width: 80%;
-    }
-    
-    .image-container::before,
-    .image-container::after {
-        max-width: 80%;
-        width: 80%;
-    }
-    
-    .item-details {
-        padding: 20px;
+    .left-section {
+        min-height: 50vh;
     }
 }
