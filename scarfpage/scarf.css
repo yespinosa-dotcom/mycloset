@@ -44,16 +44,16 @@ body {
 
 @keyframes frameSequence {
     0%, 24.99% {
-        content: url('/media/scarf.png');
+        content: url('../media/scarf.png');
     }
     25%, 49.99% {
-        content: url('/media/scarf_anim_a.png');
+        content: url('../media/scarf_anim_a.png');
     }
     50%, 74.99% {
-        content: url('/media/scarf_anim_b.png');
+        content: url('../media/scarf_anim_b.png');
     }
     75%, 100% {
-        content: url('/media/scarf_anim_c.png');
+        content: url('../media/scarf_anim_c.png');
     }
 }
 
