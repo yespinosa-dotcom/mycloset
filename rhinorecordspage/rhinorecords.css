@@ -44,13 +44,13 @@ body {
 
 @keyframes frameSequence {
     0%, 32.99% {
-        content: url('/media/rhinorecords.png');
+        content: url('../media/rhinorecords.png');
     }
     33%, 65.99% {
-        content: url('/media/rhinorecords_anim_a.png');
+        content: url('../media/rhinorecords_anim_a.png');
     }
     66%, 100% {
-        content: url('/media/rhinorecords_anim_b.png');
+        content: url('../media/rhinorecords_anim_b.png');
     }
 }
 
