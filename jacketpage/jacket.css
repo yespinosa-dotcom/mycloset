@@ -44,16 +44,16 @@ body {
 
 @keyframes frameSequence {
     0%, 24.99% {
-        content: url('/media/jacket_anim_z.png');
+        content: url('../media/jacket_anim_z.png');
     }
     25%, 49.99% {
-        content: url('/media/jacket.png');
+        content: url('../media/jacket.png');
     }
     50%, 74.99% {
-        content: url('/media/jacket_anim_a.png');
+        content: url('../media/jacket_anim_a.png');
     }
     75%, 100% {
-        content: url('/media/jacket_anim_b.png');
+        content: url('../media/jacket_anim_b.png');
     }
 }
 
